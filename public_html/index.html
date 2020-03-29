@@ -13,7 +13,8 @@ and open the template in the editor.
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <script src="main.js"></script>
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="css/productCard.css">
   <style>
   .fakeimg {
     height: 200px;
@@ -46,10 +47,7 @@ and open the template in the editor.
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+        <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search...">
   </div>
 </nav>
     
@@ -58,45 +56,30 @@ and open the template in the editor.
             <div class="col-sm-4">
                 <div class="card">
                     <img src="imgs/theGreatGatsby.jpg"  style="width:100%">
-                    <h1>The Great Gatsby</h1>
+                    <h1 class="title">The Great Gatsby</h1>
                     <p class ="price">$14.99</p>
-                    <p>The Great Gatsby is a novel by F. Scott Fitzgerald. It is a classic good novel.</p>
+                    <p class="description">The Great Gatsby is a novel by F. Scott Fitzgerald. It is a classic good novel.</p>
+                    <p hidden class="tag">Tragedy</p>
+                    <p hidden class="author">F. Scott Fitzgerald</p>
+                    <p hidden class="dateM">February</p>
+                    <p hidden class="dateD">10</p>
+                    <p hidden class="dateY">1925</p>
+                    <p hidden class="rating">5</p>
                     <p><button>Add to cart</button></p>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="card">
-                    <img src="imgs/theGreatGatsby.jpg"  style="width:100%">
-                    <h1>The Great Gatsby</h1>
-                    <p class ="price">$14.99</p>
-                    <p>The Great Gatsby is a novel by F. Scott Fitzgerald. It is a classic good novel.</p>
-                    <p><button>Add to cart</button></p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <img src="imgs/theGreatGatsby.jpg"  style="width:100%">
-                    <h1>The Great Gatsby</h1>
-                    <p class ="price">$14.99</p>
-                    <p>The Great Gatsby is a novel by F. Scott Fitzgerald. It is a classic good novel.</p>
-                    <p><button>Add to cart</button></p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <img src="imgs/theGreatGatsby.jpg"  style="width:100%">
-                    <h1>The Great Gatsby</h1>
-                    <p class ="price">$14.99</p>
-                    <p>The Great Gatsby is a novel by F. Scott Fitzgerald. It is a classic good novel.</p>
-                    <p><button>Add to cart</button></p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <img src="imgs/theGreatGatsby.jpg"  style="width:100%">
-                    <h1>The Great Gatsby</h1>
-                    <p class ="price">$14.99</p>
-                    <p>The Great Gatsby is a novel by F. Scott Fitzgerald. It is a classic good novel.</p>
+                    <img src=""  style="width:100%">
+                    <h1 class="title"></h1>
+                    <p class ="price"></p>
+                    <p class="description"></p>
+                    <p hidden class="tag"></p>
+                    <p hidden class="author"></p>
+                    <p hidden class="dateM"></p>
+                    <p hidden class="dateD"></p>
+                    <p hidden class="dateY"></p>
+                    <p hidden class="rating"></p>
                     <p><button>Add to cart</button></p>
                 </div>
             </div>
