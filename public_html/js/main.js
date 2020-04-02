@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 function searchFunction(){
    var input, filter, card, title, b, c, d, i, txtValueTitle, txtValueAuthor, txtValueTag;
    input = document.getElementById('myInput');
