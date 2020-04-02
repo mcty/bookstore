@@ -40,11 +40,15 @@ and open the template in the editor.
 /* Dropdown Button */
 .dropbtn {
   background-color: #d3d3d3;
+  text-align: center;
+  vertical-align: middle;
   color: white;
-  padding: 16px;
+  padding: 6px 16px;
   font-size: 16px;
-  border: none;
+  border: 0px;
   cursor: pointer;
+  height:48px;
+  width:100px;
 }
 
 /* Dropdown button on hover & focus */
@@ -81,3 +85,16 @@ and open the template in the editor.
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+.cartbtn {
+  background-color: #d3d3d3;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  padding: 6px 16px;
+  font-size: 16px;
+  border: 0px;
+  cursor: pointer;
+  height:50px;
+  width:70px;
+}
