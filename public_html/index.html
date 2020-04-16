@@ -39,7 +39,7 @@ and open the template in the editor.
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
@@ -66,7 +66,7 @@ and open the template in the editor.
 	&nbsp
 	&nbsp
         <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search...">
-        <button class="cartbtn">Cart</button>
+        <button class="cart"><a href="cart.html">Cart</a><span>0</span></button>
   </div>
 </nav>
     
@@ -76,12 +76,12 @@ and open the template in the editor.
             
             <div class="col-sm-4">
                 <div class="card">
-                    <img src="imgs/theGreatGatsby.jpg"  style="width:100%">
+                    <img src="imgs/thegreatgatsby.jpg"  style="width:100%">
                     <h1>The Great Gatsby</h1>
                     <p>$14.99</p>
                     <p>The Great Gatsby is a novel by F. Scott Fitzgerald. It is a classic good novel.</p>
                     <button class="myBtn" href="#myModal1">Product Description</button>
-                    <p><button>Add to cart</button></p>
+                    <p><button><a class="add-cart cart1" href="#">Add Cart</a></button></p>
                 </div>
                 <div id="myModal1" class="modal">
                     <!-- Modal content -->
@@ -91,13 +91,18 @@ and open the template in the editor.
                             <span class="close">&times;</span>
                         </div>
                         <div class="modal-body">
-                            <img src="imgs/theGreatGatsby.jpg" class="modal-image-t">
+                            <img src="imgs/thegreatgatsby.jpg" class="modal-image-t">
                             <b >Price:</b>
                             <p class ="price">$14.99</p>
                             <b>Description:</b>
                             <p class="description">The Great Gatsby is a novel by F. Scott Fitzgerald. It is a classic good novel.</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Tragedy</p>
+                            <p hidden class="topic">Society and Class, Love,
+							The American Dream, Wealth, Memory and the
+							Past, Dissatisfaction, Mortality, Marriage, 
+							Gender, Lies and Deceit, Education, Compassion
+							and Forgiveness, Religion, Movie</p>
                             <b>Author</b>
                             <p class="author">F. Scott Fitzgerald</p>
                             <b>Publication Date:</b>
@@ -106,7 +111,50 @@ and open the template in the editor.
                             <p class="dateY">1925</p>
                             <b>Rating:</b>
                             <p class="rating">5</p>
-                            <p><button>Add to cart</button></p>
+							<b>Review(s):</b>
+                            <p class="review">The Great Gatsby is a recognized 
+							classic. Interestingly, the book did not sell very 
+							well during Fitzgerald’s lifetime, and when he died
+							in 1940 he seemed to have regarded the book as a 
+							failure. When he died, scholars started to assess
+							his work, and The Great Gatsby was recognized as 
+							an important work of literature. Besides its recognition,
+							one must also think about its meaning for us in the present
+							day. The “prohibition” period that he writes about was a 
+							strangely decadent period in America. Furthermore, the 
+							catastrophes of the Holocaust and WWII changed much about
+							the U.S. and its position in the world. Since then, too, 
+							there has been substantial progress in civil rights, 
+							including the rights of women. In this sense, his novel
+							seems parochial, and not very relevant for us today: 
+							Too much has changed about the world. Nevertheless, I
+							think that if you approach the novel with an open mind
+							and some knowledge of the historical context, you can 
+							see elements that remain of interest today. Fitzgerald
+							was struggling with themes that are larger than his times,
+							and still speak to us today. In this sense, I can recommend
+							this book.<br/>&emsp;--Michael George</p>
+							<p class="review">I re-read TGG after more that 50 years 
+							because my grandson is reading it as a set book at A-level.
+							I didn't take in its supposed significance all those years 
+							ago, and I don't now. Apparently it gained its early fame 
+							because it was distributed to the US armed forces in huge 
+							quantites during WWII. Those readers could probably appreciate
+							the story of a young man from the wrong side of the tracks who
+							had his emotional development held back by service overseas and
+							coming into too much wealth. In 2018 the nearest equivalent
+							is highly paid young footballers playing in forreign teams.
+							It's a well constructed story told by a third person observer
+							who maintains a necessary distance from the central emotional
+							action. Readers have to do some work, and they should not be 
+							too shocked at the anti-semitism of 70+ years ago, revealed 
+							when we find out where the money came from. Why is it still 
+							on exam syllabi? I'm not sure. Perhaps its a classic - one of
+							the books that everyone knows they should read but . . .<br/>&emsp;--StephenDS</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">0743273565</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9780743273565</p>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -118,12 +166,12 @@ and open the template in the editor.
             
             <div class="col-sm-4">
                 <div class="card">
-                    <img src="imgs/theWritersRomance.jpg"  style="width:100%">
+                    <img src="imgs/thewritersromance.jpg"  style="width:100%">
                     <h1>The Writer's Romance</h1>
                     <p>$9.99</p>
                     <p>Read along as the mayhem and misunderstandings unfold in the sweet romantic comedy starring Katherine Evans (writer) and Mitch Ford (reality TV host)</p>
                     <button class="myBtn" href="#myModal2">Product Description</button>
-                    <p><button>Add to cart</button></p>
+                    <p><button><a class="add-cart cart2" href="#">Add Cart</a></button></p>
                 </div>
                 <div id="myModal2" class="modal">
                     <!-- Modal content -->
@@ -133,13 +181,14 @@ and open the template in the editor.
                             <span class="close">&times;</span>
                         </div>
                         <div class="modal-body">
-                            <img src="imgs/theWritersRomance.jpg" class="modal-image-t">
+                            <img src="imgs/thewritersromance.jpg" class="modal-image-t">
                             <b >Price:</b>
                             <p class ="price">$9.99</p>
                             <b>Description:</b>
                             <p class="description">Read along as the mayhem and misunderstandings unfold in the sweet romantic comedy starring Katherine Evans (writer) and Mitch Ford (reality TV host)</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Romance</p>
+							<p hidden class="topic">Romance, Love, Wife, Love story, Down Syndrome, Disability, Caring, Family, Young Adult</p>
                             <b>Author</b>
                             <p class="author">Elsa Kurt</p>
                             <b>Publication Date:</b>
@@ -148,7 +197,12 @@ and open the template in the editor.
                             <p class="dateY">2018</p>
                             <b>Rating:</b>
                             <p class="rating">5</p>
-                            <p><button>Add to cart</button></p>
+							<b>Review(s):</b>
+                            <p class="review">What a sweet story. It reminded me of a Hallmark movie. I love romantic comedies, so this was right up my alley.<br/>&emsp;--M.C.</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">1733753923</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9781733753920</p>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -159,12 +213,12 @@ and open the template in the editor.
             
             <div class="col-sm-4">
                 <div class="card">
-                    <img src="imgs/willsissbookcover.jpg"  style="width:100%">
+                    <img src="imgs/connecticutbeer.jpg"  style="width:100%">
                     <h1>Connecticut Beer</h1>
                     <p>$12.99</p>
                     <p>The history of the frothy beverage in Connecticut dates back to early colonists, who used it to quench their thirst in the absence of clean drinking water.</p>
                     <button class="myBtn" href="#myModal3">Product Description</button>
-                    <p><button>Add to cart</button></p>
+                    <p><button><a class="add-cart cart3" href="#">Add Cart</a></button></p>
                 </div>
                 <div id="myModal3" class="modal">
                     <!-- Modal content -->
@@ -174,13 +228,14 @@ and open the template in the editor.
                             <span class="close">&times;</span>
                         </div>
                         <div class="modal-body">
-                            <img src="imgs/willsissbookcover.jpg" class="modal-image-t">
+                            <img src="imgs/connecticutbeer.jpg" class="modal-image-t">
                             <b >Price:</b>
                             <p class ="price">$12.99</p>
                             <b>Description:</b>
                             <p class="description">The history of the frothy beverage in Connecticut dates back to early colonists, who used it to quench their thirst in the absence of clean drinking water.</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Nutmegger</p>
+							<p hidden class="topic">Beers, Drink, History, Hops, Malt, Old, Cold, Ice, Colonists, New England</p>
                             <b>Author</b>
                             <p class="author">Will Siss</p>
                             <b>Publication Date:</b>
@@ -189,7 +244,13 @@ and open the template in the editor.
                             <p class="dateY">2015</p>
                             <b>Rating:</b>
                             <p class="rating">5</p>
-                            <p><button>Add to cart</button></p>
+							<b>Review(s):</b>
+                            <p class="review">Love the history of beer in CT!<br/>&emsp;--Melissa</p>
+							<p class="review">Great reference. Beautifully done. Bought two....gave one to a friend!<br/>&emsp;--merry naddeo9</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">1626197938</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9781626197930</p>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -200,12 +261,12 @@ and open the template in the editor.
             
             <div class="col-sm-4">
                 <div class="card">
-                    <img src="imgs/andrewCanSki.jpg"  style="width:100%">
+                    <img src="imgs/andrewcanskievenwithcp.jpg"  style="width:100%">
                     <h1>Andrew Can Ski: Even with C.P.</h1>
                     <p>$8.99</p>
                     <p>Andrew Can Ski" is about a boy with a disability who is trying to find his way in the world.</p>
                     <button class="myBtn" href="#myModal4">Product Description</button>
-                    <p><button>Add to cart</button></p>
+                    <p><button><a class="add-cart cart4" href="#">Add Cart</a></button></p>
                 </div>
                 <div id="myModal4" class="modal">
                     <!-- Modal content -->
@@ -215,13 +276,14 @@ and open the template in the editor.
                             <span class="close">&times;</span>
                         </div>
                         <div class="modal-body">
-                            <img src="imgs/andrewCanSki.jpg" class="modal-image-t">
+                            <img src="imgs/andrewcanskievenwithcp.jpg" class="modal-image-t">
                             <b >Price:</b>
                             <p class ="price">$8.99</p>
                             <b>Description:</b>
                             <p class="description">Andrew Can Ski" is about a boy with a disability who is trying to find his way in the world.</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Motivational</p>
+							<p hidden class="topic">Ski, Disability, Olympics, Downhill, Mountain, Paraolympics, Local, Mother, Friendly, Elementary School, Children, Young Adult</p>
                             <b>Author</b>
                             <p class="author">Sheryl Brookman Haraghey</p>
                             <b>Publication Date:</b>
@@ -230,7 +292,22 @@ and open the template in the editor.
                             <p class="dateY">2014</p>
                             <b>Rating:</b>
                             <p class="rating">5</p>
-                            <p><button>Add to cart</button></p>
+							<b>Review(s):</b>
+                            <p class="review">A wonderful book that tells
+							life lessons for all ages. This story, 
+							told in rhyme with beautiful illustrations
+							tells the history of how a boy named Andrew
+							developed Cerebral Palsy as a baby, how his 
+							family always supported him and found ways 
+							for him to succeed - and his overall success 
+							story as a skier! Highly recommended for 
+							elementary schools, disability awareness 
+							and understanding differences. A great 
+							read-aloud for families and schools.<br/>&emsp;--amcbash</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">0990503216</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9780990503217</p>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -241,12 +318,12 @@ and open the template in the editor.
             
             <div class="col-sm-4">
                 <div class="card">
-                    <img src="imgs/hamsterInSpace.jpg"  style="width:100%">
+                    <img src="imgs/hamsterinspace.jpg"  style="width:100%">
                     <h1>Hamster in Space!</h1>
                     <p>$3.99</p>
-                    <p>Whats a boy to do when his classs pet hamster accidentally launches himself into space?</p>
+                    <p>Whats a boy to do when his class' pet hamster accidentally launches himself into space?</p>
                     <button class="myBtn" href="#myModal5">Product Description</button>
-                    <p><button>Add to cart</button></p>
+                    <p><button><a class="add-cart cart5" href="#">Add Cart</a></button></p>
                 </div>
                 <div id="myModal5" class="modal">
                     <!-- Modal content -->
@@ -256,13 +333,14 @@ and open the template in the editor.
                             <span class="close">&times;</span>
                         </div>
                         <div class="modal-body">
-                            <img src="imgs/hamsterInSpace.jpg" class="modal-image-t">
+                            <img src="imgs/hamsterinspace.jpg" class="modal-image-t">
                             <b >Price:</b>
                             <p class ="price">$3.99</p>
                             <b>Description:</b>
                             <p class="description">Whats a boy to do when his classs pet hamster accidentally launches himself into space?</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Children</p>
+							<p hidden class="topic">Hamster, Space, Pet, Adventure, Childrens, Young Adult, Bedtime, Easy Read, Easy-Read, Quick Read, Family, Funny</p>
                             <b>Author</b>
                             <p class="author">Maria Carvalho</p>
                             <b>Publication Date:</b>
@@ -271,7 +349,36 @@ and open the template in the editor.
                             <p class="dateY">2013</p>
                             <b>Rating:</b>
                             <p class="rating">4</p>
-                            <p><button>Add to cart</button></p>
+							<b>Review(s):</b>
+                            <p class="review">This story about a boy's search for
+							his lost pet hamster has a ton to offer. The book
+							includes lots of information about the solar system,
+							presented in a fun and clever way. As the search goes on,
+							the excitement builds with each new character.
+							<br/>
+							My six year old daughter enjoyed reading this rhyming
+							tale to her brothers (with a little help) and they even
+							spent the afternoon reenacting the story with stuffed animals,
+							hopping from planet to planet.
+							<br/>
+							Highly recommended!<br/>&emsp;--Awdubreuil</p>
+							<p class="review">This is a clever story about a boy in search 
+							of his class pet through the solar system. In addition to a 
+							quick lesson on the solar system, it includes concepts like 
+							kindness, creativity, cooperation and determination. Both kids
+							and parents will love this story!
+							<br/>
+							I have 4 and 6 year old boys and they both love the pictures 
+							and the story; we've read it a few times already. My 6 year old
+							is looking forward to when he can read the whole thing by himself.
+							Both boys loved the rhymes (which also made it more fun for me to read)!
+							They also have a love of the solar system and really enjoyed how the solar
+							system was incorporated into the adventure. I have a few birthday parties 
+							coming up and will definitely be ordering some as gifts.<br/>&emsp;--Jennifer DeCesare</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">1483958515</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9781483958514</p>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -282,12 +389,12 @@ and open the template in the editor.
             
             <div class="col-sm-4">
                 <div class="card">
-                    <img src="imgs/theMouseAndHisChild.jpg"  style="width:100%">
+                    <img src="imgs/themouseandhischild.jpg"  style="width:100%">
                     <h1>The Mouse and His Child</h1>
                     <p>$5.49</p>
                     <p>It is ostensibly written for 12-year-olds but has more to say, or as much to say about being alive on the Earth as any other book</p>
                     <button class="myBtn" href="#myModal6">Product Description</button>
-                    <p><button>Add to cart</button></p>
+                    <p><button><a class="add-cart cart6" href="#">Add Cart</a></button></p>
                 </div>
                 <div id="myModal6" class="modal">
                     <!-- Modal content -->
@@ -297,13 +404,14 @@ and open the template in the editor.
                             <span class="close">&times;</span>
                         </div>
                         <div class="modal-body">
-                            <img src="imgs/theMouseAndHisChild.jpg" class="modal-image-t">
+                            <img src="imgs/themouseandhischild.jpg" class="modal-image-t">
                             <b >Price:</b>
                             <p class ="price">$5.49</p>
                             <b>Description:</b>
                             <p class="description">It is ostensibly written for 12-year-olds but has more to say, or as much to say about being alive on the Earth as any other book</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Fiction</p>
+							<p hidden class="topic">Movie, Adventure, Tragedy, Love, Family, Home, Living, Pet, Animals, Rodent</p>
                             <b>Author</b>
                             <p class="author">Russell Hoban</p>
                             <b>Publication Date:</b>
@@ -312,7 +420,44 @@ and open the template in the editor.
                             <p class="dateY">2017</p>
                             <b>Rating:</b>
                             <p class="rating">3</p>
-                            <p><button>Add to cart</button></p>
+							<b>Review(s):</b>
+                            <p class="review">Like The Little Prince and Bambi,
+							this is a children’s story which adults will also enjoy.
+							It’s the poignant but often funny tale of a clockwork 
+							father and son who set out in search of the freedom to
+							become self-winding. Along the way, they evade cunning 
+							villain Manny Rat, make friends with creatures made of 
+							both flesh and clockwork, and even watch an absurdist 
+							play called The Last Visible Dog! Author Hoban is known
+							mainly for his novel Riddley Walker and the Frances series
+							of kids’ books, but this is a tale that no fantasy lover 
+							should miss.<br/>&emsp;--T. Johnson</p>
+							<p class="review">I'd only known the movie version of 
+							The Mouse and His Child, so when I'd found out there was
+							an actual book, I had to get it. I was rather surprised 
+							at some of the things going on in the book. There were 
+							times when I actually had to ask myself if it was indeed
+							a children's book. There were some rather disturbing deaths
+							that, while not exactly graphic, were still fairly detailed.
+							The story flowed smoothly, in my opinion and I felt the 
+							characters were more fleshed out than they ever were in 
+							the movie. The Father and his son feared Manny the Rat 
+							and you knew it! I think my favorite part was the ending
+							where you saw what happened to all of the characters. I 
+							also felt that while in the movie, the mouse and his child
+							become "self-winding" in that they can move on their own, 
+							in the book they become "self-winding" in that a motor inside
+							of them just keeps them going. They can't stop and they can't
+							move when they want to either. The "self-winding" concept was
+							better in the book. There were also some rather cute sketches 
+							throughout the story that helped keep the idea of it being a 
+							children's book in mind. As a whole, I think this is a very 
+							cute story but if you're looking for a book version of the movie,
+							it will fall kind of short.<br/>&emsp;--H. Reed</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">0439098267</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9780439098267</p>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -328,7 +473,7 @@ and open the template in the editor.
                     <p>$9.99</p>
                     <p>Those who don’t have a spiritual bent will enjoy the well-written, uplifting text in Dee Maggiori’s book “In the Spirit.”</p>
                     <button class="myBtn" href="#myModal7">Product Description</button>
-                    <p><button>Add to cart</button></p>
+                    <p><button><a class="add-cart cart7" href="#">Add Cart</a></button></p>
                 </div>
                 <div id="myModal7" class="modal">
                     <!-- Modal content -->
@@ -345,6 +490,7 @@ and open the template in the editor.
                             <p class="description">Those who don’t have a spiritual bent will enjoy the well-written, uplifting text in Dee Maggiori’s book “In the Spirit.”</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Christianity</p>
+							<p hidden class="topic">Irish, Humor, Essays, Ten Years, Spiritual, Thinking, Love, Playful, Adventure</p>
                             <b>Author</b>
                             <p class="author">Dee Maggiori</p>
                             <b>Publication Date:</b>
@@ -353,7 +499,12 @@ and open the template in the editor.
                             <p class="dateY">2011</p>
                             <b>Rating:</b>
                             <p class="rating">3</p>
-                            <p><button>Add to cart</button></p>
+							<b>Review(s):</b>
+                            <p class="review">No reviews available</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">1452079951</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9781452079950</p>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -364,12 +515,12 @@ and open the template in the editor.
             
             <div class="col-sm-4">
                 <div class="card">
-                    <img src="imgs/flyFishingInCT.jpg"  style="width:100%">
+                    <img src="imgs/flyfishinginct.jpg"  style="width:100%">
                     <h1>Fly Fishing in Connecticut</h1>
                     <p>$11.99</p>
                     <p>In this book, a long-time resident and devoted fly fisherman imparts a wealth of knowledge about fly fishing in Connecticut.</p>
                     <button class="myBtn" href="#myModal8">Product Description</button>
-                    <p><button>Add to cart</button></p>
+                    <p><button><a class="add-cart cart8" href="#">Add Cart</a></button></p>
                 </div>
                 <div id="myModal8" class="modal">
                     <!-- Modal content -->
@@ -379,13 +530,14 @@ and open the template in the editor.
                             <span class="close">&times;</span>
                         </div>
                         <div class="modal-body">
-                            <img src="imgs/flyFishingInCT.jpg" class="modal-image-t">
+                            <img src="imgs/flyfishinginct.jpg" class="modal-image-t">
                             <b >Price:</b>
                             <p class ="price">$11.99</p>
                             <b>Description:</b>
                             <p class="description">In this book, a long-time resident and devoted fly fisherman imparts a wealth of knowledge about fly fishing in Connecticut.</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Fishing</p>
+							<p hidden class="topic">Teaching, Fishing, Angler, Flyfishing, Fly Fishing, Fly, River, Float, Learn, DIY, Help, Catch, Hunt, Stream, Game</p>
                             <b>Author</b>
                             <p class="author">Kevin Murphy</p>
                             <b>Publication Date:</b>
@@ -394,7 +546,31 @@ and open the template in the editor.
                             <p class="dateY">2012</p>
                             <b>Rating:</b>
                             <p class="rating">5</p>
-                            <p><button>Add to cart</button></p>
+							<b>Review(s):</b>
+                            <p class="review">This is one of the most well-put-together
+							how-to books I've ever read. Kudos to Kevin Murphy for writing
+							a book that covers it all in an easy-to-read, fun format. 
+							I've been deep-sea fishing, but never fly fishing. Loved, 
+							loved, loved the "Sam Tipper Says..." tips and tricks sprinkled
+							throughout the book, as well as the little "fly hints" tucked 
+							outside the margin on so many of the pages. If you're like me,
+							you will first skim the book & read the Sams & the fly hints 
+							and realize you've already learned an incredible amount before
+							you even read the book. I wasn't overwhelmed or bored, and 
+							gathered that I knew the basics (and then some) before I should
+							go out on the river -- all with Sam Tipper guiding me along and
+							putting a smile on my face.<br/>&emsp;--Jody G.</p>
+							<p class="review">Kevin Murphy's Fly Fishing in Connecticut
+							has to be one of the most unusual fly fishing books ever written.
+							In an easy-to-read 100 pages, it teaches beginners everything they
+							need to know about equipment, trout, hatcheries, streams, 
+							weather, and more. It can be read in one or two nights and
+							get an angler to the trout stream by Saturday morning. For
+							such a small price, this book is worth its weight in gold!<br/>&emsp;--BillSpiJr</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">0819572837</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9780819572837</p>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -405,12 +581,12 @@ and open the template in the editor.
             
             <div class="col-sm-4">
                 <div class="card">
-                    <img src="imgs/ctFarmTableCookBook.jpg"  style="width:100%">
+                    <img src="imgs/theconnecticutfarmtablecookbook.jpg"  style="width:100%">
                     <h1>The Connecticut Farm Table Cookbook</h1>
                     <p>$16.99</p>
                     <p>The Connecticut Farm Table Cookbook brings home cooks a stellar collection of 150 delicious recipes from the Nutmeg State’s celebrated chefs and the dedicated farmers, fishers, ranchers, foragers, and cheese makers they partner with to create dynamic New American and New England fare</p>
                     <button class="myBtn" href="#myModal9">Product Description</button>
-                    <p><button>Add to cart</button></p>
+                    <p><button><a class="add-cart cart9" href="#">Add Cart</a></button></p>
                 </div>
                 <div id="myModal9" class="modal">
                     <!-- Modal content -->
@@ -420,13 +596,14 @@ and open the template in the editor.
                             <span class="close">&times;</span>
                         </div>
                         <div class="modal-body">
-                            <img src="imgs/ctFarmTableCookBook.jpg" class="modal-image-t">
+                            <img src="imgs/theconnecticutfarmtablecookbook.jpg" class="modal-image-t">
                             <b >Price:</b>
                             <p class ="price">$16.99</p>
                             <b>Description:</b>
                             <p class="description">The Connecticut Farm Table Cookbook brings home cooks a stellar collection of 150 delicious recipes from the Nutmeg State’s celebrated chefs and the dedicated farmers, fishers, ranchers, foragers, and cheese makers they partner with to create dynamic New American and New England fare</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Food</p>
+							<p hidden class="topic">Cook, Recipe, Homecooking, Home Cooking, Taste, Food, Drink, Nutmug, Farm, Fish, Meat, Grain, Lobster, Cookbook, Cook Book</p>
                             <b>Author</b>
                             <p class="author">Tracey Medeiros</p>
                             <p class="author">Christy Colasurdo</p>
@@ -436,7 +613,22 @@ and open the template in the editor.
                             <p class="dateY">2015</p>
                             <b>Rating:</b>
                             <p class="rating">4</p>
-                            <p><button>Add to cart</button></p>
+							<b>Review(s):</b>
+                            <p class="review">This book, while lovely, did
+							not meet my expectations. The farms mentioned
+							are mostly located in the western half of the state.
+							A great deal of the recipes were from restaurants in CT.
+							There are more photos of chefs in this cookbook than there
+							are for the recipes that are included. I almost feel 
+							like this book is more of a marketing tool for the 
+							restaurants and not about CT farms & recipes for their
+							bounty. I would have like more pictures of the dishes 
+							and less of the scenery.<br/>&emsp;--Jean Marie Haas</p>
+							<p class="review">Great stories of local farms and restaurants while including enticing recipes featuring fare from the local area.<br/>&emsp;--K. Proctor</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">1581572565</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9781581572568</p>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -447,12 +639,12 @@ and open the template in the editor.
             
             <div class="col-sm-4">
                 <div class="card">
-                    <img src="imgs/aFalseSpring.jpg"  style="width:100%">
+                    <img src="imgs/afalsespring.jpg"  style="width:100%">
                     <h1>A False Spring</h1>
                     <p>$9.99</p>
                     <p>In A False Spring, Pat Jordan traces the falling star of his once-promising pitching career, illuminating along the way his equally difficult personal struggles and quest for maturity.</p>
                     <button class="myBtn" href="#myModal10">Product Description</button>
-                    <p><button>Add to cart</button></p>
+                    <p><button><a class="add-cart cart10" href="#">Add Cart</a></button></p>
                 </div>
                 <div id="myModal10" class="modal">
                     <!-- Modal content -->
@@ -462,13 +654,14 @@ and open the template in the editor.
                             <span class="close">&times;</span>
                         </div>
                         <div class="modal-body">
-                            <img src="imgs/aFalseSpring.jpg" class="modal-image-t">
+                            <img src="imgs/afalsespring.jpg" class="modal-image-t">
                             <b >Price:</b>
                             <p class ="price">$9.99</p>
                             <b>Description:</b>
                             <p class="description">In A False Spring, Pat Jordan traces the falling star of his once-promising pitching career, illuminating along the way his equally difficult personal struggles and quest for maturity.</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Baseball</p>
+							<p hidden class="topic">Baseball, Triumph, Love, Struggle, High School, Highschool, Prospect, Pitcher, Homerun, Batter, Dugout, Young Adult, Rising Star</p>
                             <b>Author</b>
                             <p class="author">Pat Jardan</p>
                             <b>Publication Date:</b>
@@ -477,7 +670,40 @@ and open the template in the editor.
                             <p class="dateY">2005</p>
                             <b>Rating:</b>
                             <p class="rating">2</p>
-                            <p><button>Add to cart</button></p>
+							<b>Review(s):</b>
+                            <p class="review">If you've ever played a sport 
+							at a high level or wished to play a sport at a 
+							high level, this will appeal to you. Jordan was 
+							a baseball bonus baby - signed by the Braves 
+							(then in Milwaukee) and sent to the minor leagues.
+							Jordan's blazing fastball never translated into 
+							success at the minor league level and after a couple
+							of frustrating seasons, he walked away from the game
+							with his new bride. He recounts with great detail 
+							the boring hours spent on the road in small towns 
+							killing time and waiting for games to start. 
+							He recounts the frustration of not pitching 
+							effectively. The book ends without a tidy wrap-up
+							- he simply drives away from baseball and into his real life.
+							<br/>
+							Though I was never as talented or as sought after for my 
+							talents as the author, my favorite section is how Jordan 
+							recounts how he still likes to pitch, years after his career
+							ended. But now he throws toward an unoccupied home plate in 
+							front of no one at local recreational fields. He talks about
+							the way it makes him feel and he's correct. How many times 
+							have I done the same? With pitches, with free throws. In solitude.
+							Too many times to count.
+							<br/>
+							A great book. Easily one of the top 20 baseball books I've ever read.<br/>&emsp;--clemente_in_right</p>
+							<p class="review">Good insight into the author's time in minor 
+							league baseball. Tedious in many places but a good read none-the-less.
+							Honest writing by someone who went through it. Jordan writing skill shines
+							through nicely. He is a fine wordsmith.<br/>&emsp;--Suttie Sutton</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">0396070787</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9780396070788</p>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -488,12 +714,12 @@ and open the template in the editor.
             
             <div class="col-sm-4">
                 <div class="card">
-                    <img src="imgs/theSHDeathRowFanClub.jpg"  style="width:100%">
+                    <img src="imgs/thestephenhawkingdeathrowfanclub.jpg"  style="width:100%">
                     <h1>The Stephen Hawking Death Row Fan Club</h1>
                     <p>$18.99</p>
                     <p>AS DEATH ROW INMATES AWAIT EXECUTION, THEY DELVE INTO A STUDY OF THE UNIVERSE. A STALKER LETS US GLIMPSE INTO THE WORLD OF HIS COMPULSIONS.</p>
                     <button class="myBtn" href="#myModal11">Product Description</button>
-                    <p><button>Add to cart</button></p>
+                    <p><button><a class="add-cart cart11" href="#">Add Cart</a></button></p>
                 </div>
                 <div id="myModal11" class="modal">
                     <!-- Modal content -->
@@ -503,13 +729,14 @@ and open the template in the editor.
                             <span class="close">&times;</span>
                         </div>
                         <div class="modal-body">
-                            <img src="imgs/theSHDeathRowFanClub.jpg" class="modal-image-t">
+                            <img src="imgs/thestephenhawkingdeathrowfanclub.jpg" class="modal-image-t">
                             <b >Price:</b>
                             <p class ="price">$18.99</p>
                             <b>Description:</b>
                             <p class="description">AS DEATH ROW INMATES AWAIT EXECUTION, THEY DELVE INTO A STUDY OF THE UNIVERSE. A STALKER LETS US GLIMPSE INTO THE WORLD OF HIS COMPULSIONS.</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Science</p>
+							<p hidden class="topic">Mystery, Questioning, Curiosity, Death, Jail, Universe, Unknown</p>
                             <b>Author</b>
                             <p class="author">R. C. Goodwin</p>
                             <b>Publication Date:</b>
@@ -518,7 +745,24 @@ and open the template in the editor.
                             <p class="dateY">2015</p>
                             <b>Rating:</b>
                             <p class="rating">2</p>
-                            <p><button>Add to cart</button></p>
+							<b>Review(s):</b>
+                            <p class="review">I really enjoyed this book. Despite the somewhat dark material, 
+							it was not a downer to read. It wasn't exactly uplifting, but the characters were
+							unique and they were presented by a psychiatrist who offered a balanced view of 
+							their humanity, both grotesque and and vulnerable. The short stories (I honestly
+							don't know nor care which is a "novella") are a great way to tell these stories 
+							from different perspectives.<br/>&emsp;--CJF</p>
+							<p class="review">This book is for REAL! 
+							It's not your typical or predictable "yawn"
+							on convicted felons or death row inmates, so
+							forget trying to determine how things will go.
+							Goodwin's character development is as thrilling
+							as it is disturbing. You'll be drawn into this 
+							one for sure.<br/>&emsp;--CT Freeagent</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">1634130154</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9781634130158</p>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -529,12 +773,12 @@ and open the template in the editor.
             
             <div class="col-sm-4">
                 <div class="card">
-                    <img src="imgs/theLeatherman.jpg"  style="width:100%">
+                    <img src="imgs/theleathermancomestotown.jpg"  style="width:100%">
                     <h1>The Leatherman Comes To Town</h1>
                     <p>$8.99</p>
                     <p>Long ago in Connecticut, a mysterious man in a patched leather suit roamed the countryside.</p>
                     <button class="myBtn" href="#myModal12">Product Description</button>
-                    <p><button>Add to cart</button></p>
+                    <p><button><a class="add-cart cart12" href="#">Add Cart</a></button></p>
                 </div>
                 <div id="myModal12" class="modal">
                     <!-- Modal content -->
@@ -544,13 +788,14 @@ and open the template in the editor.
                             <span class="close">&times;</span>
                         </div>
                         <div class="modal-body">
-                            <img src="imgs/theLeatherman.jpg" class="modal-image-t">
+                            <img src="imgs/theleathermancomestotown.jpg" class="modal-image-t">
                             <b >Price:</b>
                             <p class ="price">$8.99</p>
                             <b>Description:</b>
                             <p class="description">Long ago in Connecticut, a mysterious man in a patched leather suit roamed the countryside</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Mystery</p>
+							<p hidden class="topic">Mystery, Scary, Unknown, Haunting, Ghost Story, Country Living, Old</p>
                             <b>Author</b>
                             <p class="author">Lisa Acerbo</p>
                             <b>Publication Date:</b>
@@ -559,7 +804,15 @@ and open the template in the editor.
                             <p class="dateY">2007</p>
                             <b>Rating:</b>
                             <p class="rating">3</p>
-                            <p><button>Add to cart</button></p>
+							<b>Review(s):</b>
+                            <p class="review">The Leatherman Comes to Town by Lisa Acerbo 
+							is a fun way for young readers to learn about history and kids 
+							will enjoy the Scooby-Doo like adventure. The story contains a 
+							good mix of interesting folklore and relatable characters. Bravo!<br/>&emsp;--Frank T.</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">1425752411</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9781425752415</p>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -576,6 +829,8 @@ and open the template in the editor.
   <p>Footer</p>
 </div>
 
+    <script src="js/cartJs.js"></script>
+    
 <script>
 // Get the button that opens the modal
 var btn = document.querySelectorAll("button.myBtn");
