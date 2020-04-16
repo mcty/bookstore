@@ -25,8 +25,62 @@ let products = [
         tag: 'connecticutbeer',
         price: 12.99,
         inCart: 0
+    },
+    {
+        name: 'Andrew Can Ski Even with CP',
+        tag: 'andrewcanski',
+        price: 8.99,
+        inCart: 0
+    },
+    {
+        name: 'Hamster in Space',
+        tag: 'hamsterinspace',
+        price: 3.99,
+        inCart: 0
+    },
+    {
+        name: 'The Mouse and His Child',
+        tag: 'themouseandhischild',
+        price: 5.49,
+        inCart: 0
+    },
+    {
+        name: 'In The Spirit',
+        tag: 'inthespirit',
+        price: 9.99,
+        inCart: 0
+    },
+    {
+        name: 'Fly Fishing In Connecticut',
+        tag: 'flyfishinginconnecticut',
+        price: 11.99,
+        inCart: 0
+    },
+    {
+        name: 'The Connecticut Farm Table Cookbook',
+        tag: 'ctfarmtablecookbook',
+        price: 16.99,
+        inCart: 0
+    },
+    {
+        name: 'A False Spring',
+        tag: 'afalsespring',
+        price: 9.99,
+        inCart: 0
+    },
+    {
+        name: 'The Stephen Hawking Death Row Fan Club',
+        tag: 'theshdeathrowfanclub',
+        price: 18.99,
+        inCart: 0
+    },
+    {
+        name: 'The Leatherman Comes To Town',
+        tag: 'theleatherman',
+        price: 8.99,
+        inCart: 0
     }
-]
+];
 
 for(let i=0; i< carts.length; i++) {
     carts[i].addEventListener('click', () => {
