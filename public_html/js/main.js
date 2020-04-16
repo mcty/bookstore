@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 function searchFunction(){
-   var input, filter, card, title, b, c, d, i, txtValueTitle, txtValueAuthor, txtValueTag;
+   var input, filter, card, title, b, c, d, e, f, g, i, txtValueTitle, txtValueAuthor, txtValueTag, txtValueISBN10, txtValueISBN13, txtValueTopic;
    input = document.getElementById('myInput');
    filter = input.value.toUpperCase();
    card = document.getElementsByClassName("col-sm-4");
@@ -13,9 +13,15 @@ function searchFunction(){
        b = card[i].getElementsByClassName("title")[0];
 	   c = card[i].getElementsByClassName("author")[0];
 	   d = card[i].getElementsByClassName("tag")[0];
+	   e = card[i].getElementsByClassName("isbn10")[0];
+	   f = card[i].getElementsByClassName("isbn13")[0];
+	   g = card[i].getElementsByClassName("topic")[0];
        txtValueTitle = b.textContent || b.innerText;
 	   txtValueAuthor = c.textContent || c.innerText;
 	   txtValueTag = d.textContent || d.innerText;
+	   txtValueISBN10 = e.textContent || e.innerText;
+	   txtValueISBN13 = f.textContent || f.innerText;
+	   txtValueTopic = g.textContent || g.innerText;
        if(txtValueTitle.toUpperCase().indexOf(filter) > -1)
 	   {
            card[i].style.display="";
@@ -27,7 +33,19 @@ function searchFunction(){
 		else if(txtValueTag.toUpperCase().indexOf(filter) > -1)
 	   {
            card[i].style.display="";
-       }	   
+       }	 
+		else if(txtValueISBN10.toUpperCase().indexOf(filter) > -1)
+	   {
+           card[i].style.display="";
+       }	
+		else if(txtValueISBN13.toUpperCase().indexOf(filter) > -1)
+	   {
+           card[i].style.display="";
+       }
+	   else if(txtValueTopic.toUpperCase().indexOf(filter) > -1)
+	   {
+           card[i].style.display="";
+       }
 	   else 
 	   {
            card[i].style.display="none";

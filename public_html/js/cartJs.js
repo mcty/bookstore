@@ -28,7 +28,7 @@ let products = [
     },
     {
         name: 'Andrew Can Ski Even with CP',
-        tag: 'andrewcanski',
+        tag: 'andrewcanskievenwithcp',
         price: 8.99,
         inCart: 0
     },
@@ -58,7 +58,7 @@ let products = [
     },
     {
         name: 'The Connecticut Farm Table Cookbook',
-        tag: 'ctfarmtablecookbook',
+        tag: 'theconnecticutfarmtablecookbook',
         price: 16.99,
         inCart: 0
     },
@@ -70,13 +70,13 @@ let products = [
     },
     {
         name: 'The Stephen Hawking Death Row Fan Club',
-        tag: 'theshdeathrowfanclub',
+        tag: 'thestephenhawkingdeathrowfanclub',
         price: 18.99,
         inCart: 0
     },
     {
         name: 'The Leatherman Comes To Town',
-        tag: 'theleatherman',
+        tag: 'theleathermancomestotown',
         price: 8.99,
         inCart: 0
     }
