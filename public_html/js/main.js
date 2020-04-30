@@ -54,6 +54,9 @@ function searchFunction(){
     
 }
 
+//
+//  THIS IS THE DROP DOWN FOR SORT ---------------------------------------
+//
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function drop() {
@@ -73,6 +76,33 @@ window.onclick = function(event) {
     }
   }
 }
+
+// ----------------------------------------------------------------------
+
+//
+//  THIS IS THE DROP DOWN FOR Browse ------------------------------------
+//
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function drop1() {
+  document.getElementById("myDropdown1").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn1')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content1");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------------------
 
 function sortAZ()
 {
@@ -922,4 +952,105 @@ window.onclick = function(event) {
     }
 }
 drop();
+}
+
+
+function sortBestSelling()
+{
+	var card, x, y, xTitle, yTitle, smallest, smallestHTML, largestHTML, smallestIndex;
+	card = document.getElementsByClassName("col-sm-4");
+	for(i = 0; i < card.length - 1; i++)
+	{
+		if (card[i].style.display !== "none")
+		{
+			x = card[i].getElementsByClassName("sold")[0];
+			xTitle = x.textContent || x.innerText;
+			console.log(xTitle + " style = " + card[i].style.display);
+			smallest = xTitle;
+			smallestHTML = card[i].innerHTML;
+			smallestIndex = i;
+			for(j = i + 1; j < card.length; j++)
+			{
+				if (card[j].style.display !== "none")
+				{
+					console.log("Subround " + (j) + "\n")
+					y = card[j].getElementsByClassName("sold")[0];
+					yTitle = y.textContent || y.innerText;
+					console.log("Comparing " + xTitle + " to " + yTitle);
+					yTitle = yTitle.replace("$", "");
+					smallest = smallest.replace("$", "");
+					console.log(yTitle);
+					if(parseFloat(yTitle) > parseFloat(smallest))
+					{
+						
+						smallest = yTitle;
+						smallestHTML = card[j].innerHTML;
+						smallestIndex = j;
+					}
+				}
+			}
+			largestHTML = card[i].innerHTML;
+			card[i].innerHTML = smallestHTML;
+			card[smallestIndex].innerHTML = largestHTML;
+		}
+	}
+	// Get the button that opens the modal
+var btn = document.querySelectorAll("button.myBtn");
+
+// All page modals
+var modals = document.querySelectorAll('.modal');
+
+// Get the <span> element that closes the modal
+var spans = document.getElementsByClassName("close");
+
+// When the user clicks the button, open the modal
+for (var i = 0; i < btn.length; i++) {
+ btn[i].onclick = function(e) {
+    e.preventDefault();
+    modal = document.querySelector(e.target.getAttribute("href"));
+    modal.style.display = "block";
+ }
+}
+
+// When the user clicks on <span> (x), close the modal
+for (var i = 0; i < spans.length; i++) {
+ spans[i].onclick = function() {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+    }
+ }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+     for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+     }
+    }
+}
+drop();
+}
+
+
+function browseBest() 
+{
+    var card = document.getElementsByClassName("col-sm-4");
+    var isBest = 1;
+    var b;
+    
+    for(i=0;i<card.length;i++){
+       b = card[i].getElementsByClassName("best")[0];
+       c = b.textContent || b.innerText;
+       console.log(c);
+       if(parseFloat(c) > 0)
+	   {
+           card[i].style.display="";
+       }
+	   else 
+	   {
+           card[i].style.display="none";
+       }
+   }
+    
 }

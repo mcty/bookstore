@@ -79,6 +79,54 @@ let products = [
         tag: 'theleathermancomestotown',
         price: 8.99,
         inCart: 0
+    },
+    {
+        name: 'O Corvo',
+        tag: 'ocorvo',
+        price: 8.99,
+        inCart: 0
+    },
+    {
+        name: 'The Raven',
+        tag: 'theraven',
+        price: 3.99,
+        inCart: 0
+    },
+    {
+        name: 'Cinderella',
+        tag: 'cinderella',
+        price: 5.49,
+        inCart: 0
+    },
+    {
+        name: 'History Of Connecticut',
+        tag: 'historyofconnecticut',
+        price: 9.99,
+        inCart: 0
+    },
+    {
+        name: 'Hidden In Plain Sight',
+        tag: 'hiddeninplainsight',
+        price: 11.99,
+        inCart: 0
+    },
+    {
+        name: 'To Kill A Mockingbird',
+        tag: 'tokillamockingbird',
+        price: 16.99,
+        inCart: 0
+    },
+    {
+        name: 'The Book Thief',
+        tag: 'thebookthief',
+        price: 9.99,
+        inCart: 0
+    },
+    {
+        name: 'The Catcher In The Rye',
+        tag: 'thecatcherintherye',
+        price: 18.99,
+        inCart: 0
     }
 ];
 
