@@ -1054,3 +1054,201 @@ function browseBest()
    }
     
 }
+
+function popCat()
+{
+	var cat = document.getElementById("catDropdown");
+	cat.innerHTML = "<a onmouseover = \"popCat()\" onmouseleave = \"depopCat()\" href=\"#\">Category<ul class=\"dropdown\"><li><a  onClick = \"browseChildren()\" href=\"#\">Children</a></li>\<li><a onClick = \"browseEducational()\" href=\"#\">Educational</a></li>\<li><a onClick = \"browseFiction()\" href=\"#\">Fiction</a></li>\<li><a onClick = \"browseFoodAndDrink()\" href=\"#\">Food & Drink</a></li>\<li><a onClick = \"browseReligion()\" href=\"#\">Religion</a></li>\<li><a onClick = \"browseRomance()\" href=\"#\">Romance</a></li>\<li><a onClick = \"browseSports()\" href=\"#\">Sports</a></li>\<li><a onClick = \"browseTragedy()\" href=\"#\">Tragedy</a></li>\</ul></a>";
+	console.log("Popcat");
+}
+function depopCat()
+{
+	var cat = document.getElementById("catDropdown");
+	cat.innerHTML = "<a onmouseover = \"popCat()\" onmouseleave = \"depopCat()\" href=\"#\">Category</a>";
+	console.log("Depopcat");
+	
+}
+
+function browseChildren() 
+{
+	console.log("Children");
+    var card = document.getElementsByClassName("col-sm-4");
+    var isChildren = 1;
+    var b;
+    
+    for(i=0;i<card.length;i++){
+       b = card[i].getElementsByClassName("tag")[0];
+       c = b.textContent || b.innerText;
+       console.log(c);
+       if((c.toUpperCase().localeCompare("CHILDREN") == 0) || (c.toUpperCase().localeCompare("MOTIVATIONAL") == 0))
+	   {
+           card[i].style.display="";
+       }
+	   else 
+	   {
+           card[i].style.display="none";
+       }
+   }
+    
+}
+
+function browseEducational() 
+{
+	console.log("Educational");
+    var card = document.getElementsByClassName("col-sm-4");
+    var isChildren = 1;
+    var b;
+    
+    for(i=0;i<card.length;i++){
+       b = card[i].getElementsByClassName("tag")[0];
+       c = b.textContent || b.innerText;
+       console.log(c);
+       if((c.toUpperCase().localeCompare("EDUCATIONAL") == 0) || (c.toUpperCase().localeCompare("HISTORY") == 0) || (c.toUpperCase().localeCompare("SCIENCE") == 0))
+	   {
+           card[i].style.display="";
+       }
+	   else 
+	   {
+           card[i].style.display="none";
+       }
+   }
+    
+}
+
+function browseFiction() 
+{
+	console.log("Fiction");
+    var card = document.getElementsByClassName("col-sm-4");
+    var isChildren = 1;
+    var b;
+    
+    for(i=0;i<card.length;i++){
+       b = card[i].getElementsByClassName("tag")[0];
+       c = b.textContent || b.innerText;
+       console.log(c);
+       if((c.toUpperCase().localeCompare("FICTION") == 0) || (c.toUpperCase().localeCompare("TRAGEDY") == 0) || (c.toUpperCase().localeCompare("CHILDREN") == 0) || (c.toUpperCase().localeCompare("MYSTERY") == 0) || (c.toUpperCase().localeCompare("THRILLER") == 0) || (c.toUpperCase().localeCompare("ADULT") == 0))
+	   {
+           card[i].style.display="";
+       }
+	   else 
+	   {
+           card[i].style.display="none";
+       }
+   }
+    
+}
+
+function browseFoodAndDrink() 
+{
+	console.log("Food and Drink");
+    var card = document.getElementsByClassName("col-sm-4");
+    var isChildren = 1;
+    var b;
+    
+    for(i=0;i<card.length;i++){
+       b = card[i].getElementsByClassName("tag")[0];
+       c = b.textContent || b.innerText;
+       console.log(c);
+       if((c.toUpperCase().localeCompare("NUTMEGGER") == 0) || (c.toUpperCase().localeCompare("FOOD") == 0))
+	   {
+           card[i].style.display="";
+       }
+	   else 
+	   {
+           card[i].style.display="none";
+       }
+   }
+    
+}
+
+function browseReligion() 
+{
+	console.log("Religion");
+    var card = document.getElementsByClassName("col-sm-4");
+    var isChildren = 1;
+    var b;
+    
+    for(i=0;i<card.length;i++){
+       b = card[i].getElementsByClassName("tag")[0];
+       c = b.textContent || b.innerText;
+       console.log(c);
+       if((c.toUpperCase().localeCompare("CHRISTIANITY") == 0))
+	   {
+           card[i].style.display="";
+       }
+	   else 
+	   {
+           card[i].style.display="none";
+       }
+   }
+    
+}
+
+function browseRomance() 
+{
+	console.log("Romance");
+    var card = document.getElementsByClassName("col-sm-4");
+    var isChildren = 1;
+    var b;
+    
+    for(i=0;i<card.length;i++){
+       b = card[i].getElementsByClassName("tag")[0];
+       c = b.textContent || b.innerText;
+       console.log(c);
+       if((c.toUpperCase().localeCompare("ROMANCE") == 0))
+	   {
+           card[i].style.display="";
+       }
+	   else 
+	   {
+           card[i].style.display="none";
+       }
+   }
+    
+}
+
+function browseSports() 
+{
+	console.log("Sports");
+    var card = document.getElementsByClassName("col-sm-4");
+    var isChildren = 1;
+    var b;
+    
+    for(i=0;i<card.length;i++){
+       b = card[i].getElementsByClassName("tag")[0];
+       c = b.textContent || b.innerText;
+       console.log(c);
+       if((c.toUpperCase().localeCompare("BASEBALL") == 0) || (c.toUpperCase().localeCompare("FISHING") == 0))
+	   {
+           card[i].style.display="";
+       }
+	   else 
+	   {
+           card[i].style.display="none";
+       }
+   }
+    
+}
+
+function browseTragedy() 
+{
+	console.log("Tragedy");
+    var card = document.getElementsByClassName("col-sm-4");
+    var isChildren = 1;
+    var b;
+    
+    for(i=0;i<card.length;i++){
+       b = card[i].getElementsByClassName("tag")[0];
+       c = b.textContent || b.innerText;
+       console.log(c);
+       if((c.toUpperCase().localeCompare("TRAGEDY") == 0))
+	   {
+           card[i].style.display="";
+       }
+	   else 
+	   {
+           card[i].style.display="none";
+       }
+   }
+    
+}

@@ -49,11 +49,14 @@ and open the template in the editor.
       </li>
     </ul>
         <div class="dropdown1">
-		  <button onclick="drop1()" class="dropbtn1">Browse By...</button>
-		  <div id="myDropdown1" class="dropdown-content1">
-                        <a onClick = "browseBest()" href="#">Recommended</a>
-		  </div>
-	</div>
+			<button onclick="drop1()" class="dropbtn1">Browse By...</button>
+			<div id="myDropdown1" class="dropdown-content1">
+			<ul>
+				<li><a onClick = "browseBest()" href="#">Recommended</a></li>
+				<li id = "catDropdown"><a onmouseover = "popCat()" onmouseleave = "depopCat()" href="#">Category</a></li>
+			</ul>
+			</div>
+		</div>
         <div class="dropdown">
 		  <button onclick="drop()" class="dropbtn">Sort By...</button>
 		  <div id="myDropdown" class="dropdown-content">
