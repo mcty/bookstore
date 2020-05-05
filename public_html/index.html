@@ -48,8 +48,17 @@ and open the template in the editor.
         <a class="nav-link" href="#">Contact Us</a>
       </li>
     </ul>
+        <div class="dropdown1">
+			<button onclick="drop1()" class="dropbtn1">Browse By...</button>
+			<div id="myDropdown1" class="dropdown-content1">
+			<ul>
+				<li><a onClick = "browseBest()" href="#">Recommended</a></li>
+				<li id = "catDropdown"><a onmouseover = "popCat()" onmouseleave = "depopCat()" href="#">Category</a></li>
+			</ul>
+			</div>
+		</div>
         <div class="dropdown">
-		  <button onclick="drop()" class="dropbtn">Sort by...</button>
+		  <button onclick="drop()" class="dropbtn">Sort By...</button>
 		  <div id="myDropdown" class="dropdown-content">
 			<a onClick = "sortPriceLowToHigh()" href="#">Lowest Price First</a>
 			<a onClick = "sortPriceHighToLow()" href="#">Highest Price First</a>
@@ -61,12 +70,13 @@ and open the template in the editor.
 			<a onClick = "sortZAAuthor()" href="#">Author Z - A</a>
 			<a onClick = "sortDateNewest()" href="#">Date Newest First</a>
 			<a onClick = "sortDateOldest()" href="#">Date Oldest First</a>
+                        <a onClick = "sortBestSelling()" href="#">BestSeller</a>
 		  </div>
 	</div>
 	&nbsp
 	&nbsp
-        <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search...">
-        <button class="cart"><a href="cart.html">Cart</a><span>0</span></button>
+        <input class="searchBar" type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search...">
+        <button class="cart cartbtn"><a href="cart.html">Cart</a><span>0</span></button>
   </div>
 </nav>
     
@@ -98,6 +108,8 @@ and open the template in the editor.
                             <p class="description">The Great Gatsby is a novel by F. Scott Fitzgerald. It is a classic good novel.</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Tragedy</p>
+                            <p hidden class="sold">100</p>
+                            <p hidden class="best">1</p>
                             <p hidden class="topic">Society and Class, Love,
 							The American Dream, Wealth, Memory and the
 							Past, Dissatisfaction, Mortality, Marriage, 
@@ -155,6 +167,8 @@ and open the template in the editor.
                             <p class="isbn10">0743273565</p>
 							<b>ISBN-13:</b>
                             <p class="isbn13">9780743273565</p>
+                            <b>Similar books</b>
+                            <button class="myBtn" href="#myModal2">The Writer's Romance</button>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -188,6 +202,8 @@ and open the template in the editor.
                             <p class="description">Read along as the mayhem and misunderstandings unfold in the sweet romantic comedy starring Katherine Evans (writer) and Mitch Ford (reality TV host)</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Romance</p>
+                            <p hidden class="sold">50</p>
+                            <p hidden class="best">0</p>
 							<p hidden class="topic">Romance, Love, Wife, Love story, Down Syndrome, Disability, Caring, Family, Young Adult</p>
                             <b>Author</b>
                             <p class="author">Elsa Kurt</p>
@@ -203,6 +219,8 @@ and open the template in the editor.
                             <p class="isbn10">1733753923</p>
 							<b>ISBN-13:</b>
                             <p class="isbn13">9781733753920</p>
+                            <b>Similar Books</b>
+                            <button class = "myBtn" Href = "#myModal6">The Mouse and His Child</button>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -235,6 +253,8 @@ and open the template in the editor.
                             <p class="description">The history of the frothy beverage in Connecticut dates back to early colonists, who used it to quench their thirst in the absence of clean drinking water.</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Nutmegger</p>
+                            <p hidden class="sold">25</p>
+                            <p hidden class="best">0</p>
 							<p hidden class="topic">Beers, Drink, History, Hops, Malt, Old, Cold, Ice, Colonists, New England</p>
                             <b>Author</b>
                             <p class="author">Will Siss</p>
@@ -251,6 +271,8 @@ and open the template in the editor.
                             <p class="isbn10">1626197938</p>
 							<b>ISBN-13:</b>
                             <p class="isbn13">9781626197930</p>
+                            <b>Similar Books</b>
+                            <button class = "myBtn" Href="#myModal9">Connecticut FarmTable Cookbook</button>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -283,6 +305,8 @@ and open the template in the editor.
                             <p class="description">Andrew Can Ski" is about a boy with a disability who is trying to find his way in the world.</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Motivational</p>
+                            <p hidden class="sold">12</p>
+                            <p hidden class="best">0</p>
 							<p hidden class="topic">Ski, Disability, Olympics, Downhill, Mountain, Paraolympics, Local, Mother, Friendly, Elementary School, Children, Young Adult</p>
                             <b>Author</b>
                             <p class="author">Sheryl Brookman Haraghey</p>
@@ -308,6 +332,8 @@ and open the template in the editor.
                             <p class="isbn10">0990503216</p>
 							<b>ISBN-13:</b>
                             <p class="isbn13">9780990503217</p>
+                            <b>Similar books</b>
+                            <button class="myBtn" href="#myModal5">Hamster in Space!</button>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -340,6 +366,8 @@ and open the template in the editor.
                             <p class="description">Whats a boy to do when his classs pet hamster accidentally launches himself into space?</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Children</p>
+                            <p hidden class="sold">6</p>
+                            <p hidden class="best">0</p>
 							<p hidden class="topic">Hamster, Space, Pet, Adventure, Childrens, Young Adult, Bedtime, Easy Read, Easy-Read, Quick Read, Family, Funny</p>
                             <b>Author</b>
                             <p class="author">Maria Carvalho</p>
@@ -379,6 +407,8 @@ and open the template in the editor.
                             <p class="isbn10">1483958515</p>
 							<b>ISBN-13:</b>
                             <p class="isbn13">9781483958514</p>
+                            <b>Similar Books</b>
+                            <button class = "myBtn" Href="#myModal12">The Leatherman Comes to Town</button>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -411,6 +441,8 @@ and open the template in the editor.
                             <p class="description">It is ostensibly written for 12-year-olds but has more to say, or as much to say about being alive on the Earth as any other book</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Fiction</p>
+                            <p hidden class="sold">90</p>
+                            <p hidden class="best">0</p>
 							<p hidden class="topic">Movie, Adventure, Tragedy, Love, Family, Home, Living, Pet, Animals, Rodent</p>
                             <b>Author</b>
                             <p class="author">Russell Hoban</p>
@@ -458,6 +490,8 @@ and open the template in the editor.
                             <p class="isbn10">0439098267</p>
 							<b>ISBN-13:</b>
                             <p class="isbn13">9780439098267</p>
+                            <b>Similar Books</b>
+                            <button class = "myBtn" Href="#myModal12">The Leatherman Comes To Town</button>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -490,6 +524,8 @@ and open the template in the editor.
                             <p class="description">Those who don’t have a spiritual bent will enjoy the well-written, uplifting text in Dee Maggiori’s book “In the Spirit.”</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Christianity</p>
+                            <p hidden class="sold">45</p>
+                            <p hidden class="best">0</p>
 							<p hidden class="topic">Irish, Humor, Essays, Ten Years, Spiritual, Thinking, Love, Playful, Adventure</p>
                             <b>Author</b>
                             <p class="author">Dee Maggiori</p>
@@ -505,6 +541,8 @@ and open the template in the editor.
                             <p class="isbn10">1452079951</p>
 							<b>ISBN-13:</b>
                             <p class="isbn13">9781452079950</p>
+                            <b>Similar books</b>
+                            <button class = "myBtn" Href="#myModal10">A False Spring </button>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -537,6 +575,8 @@ and open the template in the editor.
                             <p class="description">In this book, a long-time resident and devoted fly fisherman imparts a wealth of knowledge about fly fishing in Connecticut.</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Fishing</p>
+                            <p hidden class="sold">22</p>
+                            <p hidden class="best">0</p>
 							<p hidden class="topic">Teaching, Fishing, Angler, Flyfishing, Fly Fishing, Fly, River, Float, Learn, DIY, Help, Catch, Hunt, Stream, Game</p>
                             <b>Author</b>
                             <p class="author">Kevin Murphy</p>
@@ -571,6 +611,8 @@ and open the template in the editor.
                             <p class="isbn10">0819572837</p>
 							<b>ISBN-13:</b>
                             <p class="isbn13">9780819572837</p>
+                            <b>Similar books</b>
+                            <button class = "myBtn" Href="#myModal10">A False Spring </button>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -603,6 +645,8 @@ and open the template in the editor.
                             <p class="description">The Connecticut Farm Table Cookbook brings home cooks a stellar collection of 150 delicious recipes from the Nutmeg State’s celebrated chefs and the dedicated farmers, fishers, ranchers, foragers, and cheese makers they partner with to create dynamic New American and New England fare</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Food</p>
+                            <p hidden class="sold">11</p>
+                            <p hidden class="best">0</p>
 							<p hidden class="topic">Cook, Recipe, Homecooking, Home Cooking, Taste, Food, Drink, Nutmug, Farm, Fish, Meat, Grain, Lobster, Cookbook, Cook Book</p>
                             <b>Author</b>
                             <p class="author">Tracey Medeiros</p>
@@ -629,6 +673,8 @@ and open the template in the editor.
                             <p class="isbn10">1581572565</p>
 							<b>ISBN-13:</b>
                             <p class="isbn13">9781581572568</p>
+                            <b>Similar books</b>
+                            <button class = "myBtn" Href="#myModal11">Stephen Hawking Death Row Fan Club</button>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -661,6 +707,8 @@ and open the template in the editor.
                             <p class="description">In A False Spring, Pat Jordan traces the falling star of his once-promising pitching career, illuminating along the way his equally difficult personal struggles and quest for maturity.</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Baseball</p>
+                            <p hidden class="sold">80</p>
+                            <p hidden class="best">0</p>
 							<p hidden class="topic">Baseball, Triumph, Love, Struggle, High School, Highschool, Prospect, Pitcher, Homerun, Batter, Dugout, Young Adult, Rising Star</p>
                             <b>Author</b>
                             <p class="author">Pat Jardan</p>
@@ -704,6 +752,8 @@ and open the template in the editor.
                             <p class="isbn10">0396070787</p>
 							<b>ISBN-13:</b>
                             <p class="isbn13">9780396070788</p>
+                            <b>Similar books</b>
+                            <button class="myBtn" href="#myModal11">The Stephen Hawking Death Row Fan Club</button>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -736,6 +786,8 @@ and open the template in the editor.
                             <p class="description">AS DEATH ROW INMATES AWAIT EXECUTION, THEY DELVE INTO A STUDY OF THE UNIVERSE. A STALKER LETS US GLIMPSE INTO THE WORLD OF HIS COMPULSIONS.</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Science</p>
+                            <p hidden class="sold">40</p>
+                            <p hidden class="best">0</p>
 							<p hidden class="topic">Mystery, Questioning, Curiosity, Death, Jail, Universe, Unknown</p>
                             <b>Author</b>
                             <p class="author">R. C. Goodwin</p>
@@ -763,6 +815,8 @@ and open the template in the editor.
                             <p class="isbn10">1634130154</p>
 							<b>ISBN-13:</b>
                             <p class="isbn13">9781634130158</p>
+                            <b>Similar books</b>
+                            <button class="myBtn" href="#myModal12">The Leatherman Comes To Town</button>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -795,6 +849,8 @@ and open the template in the editor.
                             <p class="description">Long ago in Connecticut, a mysterious man in a patched leather suit roamed the countryside</p>
                             <b>Genre/Tags:</b>
                             <p class="tag">Mystery</p>
+                            <p hidden class="sold">20</p>
+                            <p hidden class="best">0</p>
 							<p hidden class="topic">Mystery, Scary, Unknown, Haunting, Ghost Story, Country Living, Old</p>
                             <b>Author</b>
                             <p class="author">Lisa Acerbo</p>
@@ -813,6 +869,8 @@ and open the template in the editor.
                             <p class="isbn10">1425752411</p>
 							<b>ISBN-13:</b>
                             <p class="isbn13">9781425752415</p>
+                            <b>Similar books</b>
+                            <button class="myBtn" href="#myModal1">The Great Gatsby</button>
                         </div>
                         <div class="modal-footers">
                             <h3>CTBooks2020</h3>
@@ -820,6 +878,555 @@ and open the template in the editor.
                     </div>
                 </div>
             </div>
+            
+            
+            
+            
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="imgs/13.jpg"  style="width:100%">
+                    <h1>O Corvo</h1>
+                    <p>$8.99</p>
+                    <p>O Corovo is a book a great book the best of many books.</p>
+                    <button class="myBtn" href="#myModal13">Product Description</button>
+                    <p><button><a class="add-cart cart13" href="#">Add Cart</a></button></p>
+                </div>
+                <div id="myModal13" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="title">O Corvo</h2>
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                            <img src="imgs/13.jpg" class="modal-image-t">
+                            <b >Price:</b>
+                            <p class ="price">$8.99</p>
+                            <b>Description:</b>
+                            <p class="description">Andrew Can Ski" is about a boy with a disability who is trying to find his way in the world.</p>
+                            <b>Genre/Tags:</b>
+                            <p class="tag">Thriller</p>
+                            <p hidden class="sold">12</p>
+                            <p hidden class="best">1</p>
+							<p hidden class="topic">Dark, Thriller</p>
+                            <b>Author</b>
+                            <p class="author">Edgar Allan Poe</p>
+                            <b>Publication Date:</b>
+                            <p class="dateM">July</p>
+                            <p class="dateD">15</p>
+                            <p class="dateY">1900</p>
+                            <b>Rating:</b>
+                            <p class="rating">5</p>
+							<b>Review(s):</b>
+                            <p class="review">A wonderful book that tells
+							life lessons for all ages. This story, 
+							told in rhyme with beautiful illustrations
+							tells the history of how a boy named Andrew
+							developed Cerebral Palsy as a baby, how his 
+							family always supported him and found ways 
+							for him to succeed - and his overall success 
+							story as a skier! Highly recommended for 
+							elementary schools, disability awareness 
+							and understanding differences. A great 
+							read-aloud for families and schools.<br/>&emsp;--amcbash</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">0990513216</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9780990103217</p>
+                            <b>Similar books</b>
+                            <button class="myBtn" href="#myModal5">Hamster in Space!</button>
+                        </div>
+                        <div class="modal-footers">
+                            <h3>CTBooks2020</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="imgs/14.jpg"  style="width:100%">
+                    <h1>The Raven</h1>
+                    <p>$3.99</p>
+                    <p>Whats a boy to do when his class' pet hamster accidentally launches himself into space?</p>
+                    <button class="myBtn" href="#myModal14">Product Description</button>
+                    <p><button><a class="add-cart cart14" href="#">Add Cart</a></button></p>
+                </div>
+                <div id="myModal14" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="title">The Raven</h2>
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                            <img src="imgs/14.jpg" class="modal-image-t">
+                            <b >Price:</b>
+                            <p class ="price">$3.99</p>
+                            <b>Description:</b>
+                            <p class="description">Whats a boy to do when his classs pet hamster accidentally launches himself into space?</p>
+                            <b>Genre/Tags:</b>
+                            <p class="tag">Adult</p>
+                            <p hidden class="sold">6</p>
+                            <p hidden class="best">1</p>
+							<p hidden class="topic">Dark, Adult, Hotel</p>
+                            <b>Author</b>
+                            <p class="author">Edgar Allan Poe</p>
+                            <b>Publication Date:</b>
+                            <p class="dateM">September</p>
+                            <p class="dateD">27</p>
+                            <p class="dateY">1900</p>
+                            <b>Rating:</b>
+                            <p class="rating">4</p>
+							<b>Review(s):</b>
+                            <p class="review">This story about a boy's search for
+							his lost pet hamster has a ton to offer. The book
+							includes lots of information about the solar system,
+							presented in a fun and clever way. As the search goes on,
+							the excitement builds with each new character.
+							<br/>
+							My six year old daughter enjoyed reading this rhyming
+							tale to her brothers (with a little help) and they even
+							spent the afternoon reenacting the story with stuffed animals,
+							hopping from planet to planet.
+							<br/>
+							Highly recommended!<br/>&emsp;--Awdubreuil</p>
+							<p class="review">This is a clever story about a boy in search 
+							of his class pet through the solar system. In addition to a 
+							quick lesson on the solar system, it includes concepts like 
+							kindness, creativity, cooperation and determination. Both kids
+							and parents will love this story!
+							<br/>
+							I have 4 and 6 year old boys and they both love the pictures 
+							and the story; we've read it a few times already. My 6 year old
+							is looking forward to when he can read the whole thing by himself.
+							Both boys loved the rhymes (which also made it more fun for me to read)!
+							They also have a love of the solar system and really enjoyed how the solar
+							system was incorporated into the adventure. I have a few birthday parties 
+							coming up and will definitely be ordering some as gifts.<br/>&emsp;--Jennifer DeCesare</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">1483951515</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9781483918514</p>
+                            <b>Similar books</b>
+                            <button class="myBtn" href="#myModal6">The Mouse and His Child</button>
+                        </div>
+                        <div class="modal-footers">
+                            <h3>CTBooks2020</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="imgs/15.jpg"  style="width:100%">
+                    <h1>Cinderella</h1>
+                    <p>$5.49</p>
+                    <p>It is ostensibly written for 12-year-olds but has more to say, or as much to say about being alive on the Earth as any other book</p>
+                    <button class="myBtn" href="#myModal15">Product Description</button>
+                    <p><button><a class="add-cart cart15" href="#">Add Cart</a></button></p>
+                </div>
+                <div id="myModal15" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="title">Cinderella</h2>
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                            <img src="imgs/15.jpg" class="modal-image-t">
+                            <b >Price:</b>
+                            <p class ="price">$5.49</p>
+                            <b>Description:</b>
+                            <p class="description">It is ostensibly written for 12-year-olds but has more to say, or as much to say about being alive on the Earth as any other book</p>
+                            <b>Genre/Tags:</b>
+                            <p class="tag">Tragedy</p>
+                            <p hidden class="sold">90</p>
+                            <p hidden class="best">1</p>
+							<p hidden class="topic">Adventure, Tragedy, Love, Dark</p>
+                            <b>Author</b>
+                            <p class="author">The Brothers Grimm</p>
+                            <b>Publication Date:</b>
+                            <p class="dateM">September</p>
+                            <p class="dateD">1</p>
+                            <p class="dateY">1877</p>
+                            <b>Rating:</b>
+                            <p class="rating">3</p>
+							<b>Review(s):</b>
+                            <p class="review">Like The Little Prince and Bambi,
+							this is a children’s story which adults will also enjoy.
+							It’s the poignant but often funny tale of a clockwork 
+							father and son who set out in search of the freedom to
+							become self-winding. Along the way, they evade cunning 
+							villain Manny Rat, make friends with creatures made of 
+							both flesh and clockwork, and even watch an absurdist 
+							play called The Last Visible Dog! Author Hoban is known
+							mainly for his novel Riddley Walker and the Frances series
+							of kids’ books, but this is a tale that no fantasy lover 
+							should miss.<br/>&emsp;--T. Johnson</p>
+							<p class="review">I'd only known the movie version of 
+							The Mouse and His Child, so when I'd found out there was
+							an actual book, I had to get it. I was rather surprised 
+							at some of the things going on in the book. There were 
+							times when I actually had to ask myself if it was indeed
+							a children's book. There were some rather disturbing deaths
+							that, while not exactly graphic, were still fairly detailed.
+							The story flowed smoothly, in my opinion and I felt the 
+							characters were more fleshed out than they ever were in 
+							the movie. The Father and his son feared Manny the Rat 
+							and you knew it! I think my favorite part was the ending
+							where you saw what happened to all of the characters. I 
+							also felt that while in the movie, the mouse and his child
+							become "self-winding" in that they can move on their own, 
+							in the book they become "self-winding" in that a motor inside
+							of them just keeps them going. They can't stop and they can't
+							move when they want to either. The "self-winding" concept was
+							better in the book. There were also some rather cute sketches 
+							throughout the story that helped keep the idea of it being a 
+							children's book in mind. As a whole, I think this is a very 
+							cute story but if you're looking for a book version of the movie,
+							it will fall kind of short.<br/>&emsp;--H. Reed</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">0139098267</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9180439098267</p>
+                            <b>Similar books</b>
+                            <button class="myBtn" href="#myModal7">In The Spirit</button>
+                        </div>
+                        <div class="modal-footers">
+                            <h3>CTBooks2020</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="imgs/16.jpg"  style="width:100%">
+                    <h1>History Of Connecticut</h1>
+                    <p>$9.99</p>
+                    <p>Those who don’t have a spiritual bent will enjoy the well-written, uplifting text in Dee Maggiori’s book “In the Spirit.”</p>
+                    <button class="myBtn" href="#myModal16">Product Description</button>
+                    <p><button><a class="add-cart cart16" href="#">Add Cart</a></button></p>
+                </div>
+                <div id="myModal16" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="title">History Of Connecticut</h2>
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                            <img src="imgs/16.jpg" class="modal-image-t">
+                            <b >Price:</b>
+                            <p class ="price">$9.99</p>
+                            <b>Description:</b>
+                            <p class="description">Those who don’t have a spiritual bent will enjoy the well-written, uplifting text in Dee Maggiori’s book “In the Spirit.”</p>
+                            <b>Genre/Tags:</b>
+                            <p class="tag">History</p>
+                            <p hidden class="sold">45</p>
+                            <p hidden class="best">0</p>
+							<p hidden class="topic">History, Connecticut</p>
+                            <b>Author</b>
+                            <p class="author">Wilson Faude</p>
+                            <b>Publication Date:</b>
+                            <p class="dateM">November</p>
+                            <p class="dateD">4</p>
+                            <p class="dateY">2001</p>
+                            <b>Rating:</b>
+                            <p class="rating">3</p>
+							<b>Review(s):</b>
+                            <p class="review">No reviews available</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">1451079951</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9781452019950</p>
+                            <b>Similar books</b>
+                            <button class="myBtn" href="#myModal8">Fly Fishing in Connecticut</button>
+                        </div>
+                        <div class="modal-footers">
+                            <h3>CTBooks2020</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="imgs/17.jpg"  style="width:100%">
+                    <h1>Hidden in plain Sight</h1>
+                    <p>$11.99</p>
+                    <p>In this book, a long-time resident and devoted fly fisherman imparts a wealth of knowledge about fly fishing in Connecticut.</p>
+                    <button class="myBtn" href="#myModal17">Product Description</button>
+                    <p><button><a class="add-cart cart17" href="#">Add Cart</a></button></p>
+                </div>
+                <div id="myModal17" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="title">Hidden in plain Sight</h2>
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                            <img src="imgs/17.jpg" class="modal-image-t">
+                            <b >Price:</b>
+                            <p class ="price">$11.99</p>
+                            <b>Description:</b>
+                            <p class="description">In this book, a long-time resident and devoted fly fisherman imparts a wealth of knowledge about fly fishing in Connecticut.</p>
+                            <b>Genre/Tags:</b>
+                            <p class="tag">History</p>
+                            <p hidden class="sold">22</p>
+                            <p hidden class="best">0</p>
+							<p hidden class="topic">Sightseeing, Connecticut</p>
+                            <b>Author</b>
+                            <p class="author">David Leff</p>
+                            <b>Publication Date:</b>
+                            <p class="dateM">April</p>
+                            <p class="dateD">1</p>
+                            <p class="dateY">2012</p>
+                            <b>Rating:</b>
+                            <p class="rating">5</p>
+							<b>Review(s):</b>
+                            <p class="review">This is one of the most well-put-together
+							how-to books I've ever read. Kudos to Kevin Murphy for writing
+							a book that covers it all in an easy-to-read, fun format. 
+							I've been deep-sea fishing, but never fly fishing. Loved, 
+							loved, loved the "Sam Tipper Says..." tips and tricks sprinkled
+							throughout the book, as well as the little "fly hints" tucked 
+							outside the margin on so many of the pages. If you're like me,
+							you will first skim the book & read the Sams & the fly hints 
+							and realize you've already learned an incredible amount before
+							you even read the book. I wasn't overwhelmed or bored, and 
+							gathered that I knew the basics (and then some) before I should
+							go out on the river -- all with Sam Tipper guiding me along and
+							putting a smile on my face.<br/>&emsp;--Jody G.</p>
+							<p class="review">Kevin Murphy's Fly Fishing in Connecticut
+							has to be one of the most unusual fly fishing books ever written.
+							In an easy-to-read 100 pages, it teaches beginners everything they
+							need to know about equipment, trout, hatcheries, streams, 
+							weather, and more. It can be read in one or two nights and
+							get an angler to the trout stream by Saturday morning. For
+							such a small price, this book is worth its weight in gold!<br/>&emsp;--BillSpiJr</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">0819572137</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9781819572837</p>
+                            <b>Similar books</b>
+                            <button class="myBtn" href="#myModal9">The Connecticut Farm Table Cookbook</button>
+                        </div>
+                        <div class="modal-footers">
+                            <h3>CTBooks2020</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="imgs/18.jpg"  style="width:100%">
+                    <h1>To Kill a Mockingbird</h1>
+                    <p>$16.99</p>
+                    <p>The Connecticut Farm Table Cookbook brings home cooks a stellar collection of 150 delicious recipes from the Nutmeg State’s celebrated chefs and the dedicated farmers, fishers, ranchers, foragers, and cheese makers they partner with to create dynamic New American and New England fare</p>
+                    <button class="myBtn" href="#myModal18">Product Description</button>
+                    <p><button><a class="add-cart cart18" href="#">Add Cart</a></button></p>
+                </div>
+                <div id="myModal18" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="title">To Kill a Mockingbird</h2>
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                            <img src="imgs/18.jpg" class="modal-image-t">
+                            <b >Price:</b>
+                            <p class ="price">$16.99</p>
+                            <b>Description:</b>
+                            <p class="description">The Connecticut Farm Table Cookbook brings home cooks a stellar collection of 150 delicious recipes from the Nutmeg State’s celebrated chefs and the dedicated farmers, fishers, ranchers, foragers, and cheese makers they partner with to create dynamic New American and New England fare</p>
+                            <b>Genre/Tags:</b>
+                            <p class="tag">Fiction</p>
+                            <p hidden class="sold">11</p>
+                            <p hidden class="best">1</p>
+							<p hidden class="topic">History, Sad, Fiction</p>
+                            <b>Author</b>
+                            <p class="author">Harper Lee</p>
+                            <b>Publication Date:</b>
+                            <p class="dateM">June</p>
+                            <p class="dateD">8</p>
+                            <p class="dateY">1960</p>
+                            <b>Rating:</b>
+                            <p class="rating">4</p>
+							<b>Review(s):</b>
+                            <p class="review">This book, while lovely, did
+							not meet my expectations. The farms mentioned
+							are mostly located in the western half of the state.
+							A great deal of the recipes were from restaurants in CT.
+							There are more photos of chefs in this cookbook than there
+							are for the recipes that are included. I almost feel 
+							like this book is more of a marketing tool for the 
+							restaurants and not about CT farms & recipes for their
+							bounty. I would have like more pictures of the dishes 
+							and less of the scenery.<br/>&emsp;--Jean Marie Haas</p>
+							<p class="review">Great stories of local farms and restaurants while including enticing recipes featuring fare from the local area.<br/>&emsp;--K. Proctor</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">1581572565</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9781581572568</p>
+                            <b>Similar books</b>
+                            <button class="myBtn" href="#myModal10">A False Spring</button>
+                        </div>
+                        <div class="modal-footers">
+                            <h3>CTBooks2020</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="imgs/19.jpg"  style="width:100%">
+                    <h1>The Book Thief</h1>
+                    <p>$9.99</p>
+                    <p>In A False Spring, Pat Jordan traces the falling star of his once-promising pitching career, illuminating along the way his equally difficult personal struggles and quest for maturity.</p>
+                    <button class="myBtn" href="#myModal19">Product Description</button>
+                    <p><button><a class="add-cart cart19" href="#">Add Cart</a></button></p>
+                </div>
+                <div id="myModal19" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="title">The Book Thief</h2>
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                            <img src="imgs/19.jpg" class="modal-image-t">
+                            <b >Price:</b>
+                            <p class ="price">$9.99</p>
+                            <b>Description:</b>
+                            <p class="description">In A False Spring, Pat Jordan traces the falling star of his once-promising pitching career, illuminating along the way his equally difficult personal struggles and quest for maturity.</p>
+                            <b>Genre/Tags:</b>
+                            <p class="tag">Fiction</p>
+                            <p hidden class="sold">80</p>
+                            <p hidden class="best">0</p>
+							<p hidden class="topic">Fiction, Germany</p>
+                            <b>Author</b>
+                            <p class="author">Markus Zuska</p>
+                            <b>Publication Date:</b>
+                            <p class="dateM">September</p>
+                            <p class="dateD">1</p>
+                            <p class="dateY">1994</p>
+                            <b>Rating:</b>
+                            <p class="rating">2</p>
+							<b>Review(s):</b>
+                            <p class="review">If you've ever played a sport 
+							at a high level or wished to play a sport at a 
+							high level, this will appeal to you. Jordan was 
+							a baseball bonus baby - signed by the Braves 
+							(then in Milwaukee) and sent to the minor leagues.
+							Jordan's blazing fastball never translated into 
+							success at the minor league level and after a couple
+							of frustrating seasons, he walked away from the game
+							with his new bride. He recounts with great detail 
+							the boring hours spent on the road in small towns 
+							killing time and waiting for games to start. 
+							He recounts the frustration of not pitching 
+							effectively. The book ends without a tidy wrap-up
+							- he simply drives away from baseball and into his real life.
+							<br/>
+							Though I was never as talented or as sought after for my 
+							talents as the author, my favorite section is how Jordan 
+							recounts how he still likes to pitch, years after his career
+							ended. But now he throws toward an unoccupied home plate in 
+							front of no one at local recreational fields. He talks about
+							the way it makes him feel and he's correct. How many times 
+							have I done the same? With pitches, with free throws. In solitude.
+							Too many times to count.
+							<br/>
+							A great book. Easily one of the top 20 baseball books I've ever read.<br/>&emsp;--clemente_in_right</p>
+							<p class="review">Good insight into the author's time in minor 
+							league baseball. Tedious in many places but a good read none-the-less.
+							Honest writing by someone who went through it. Jordan writing skill shines
+							through nicely. He is a fine wordsmith.<br/>&emsp;--Suttie Sutton</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">0396071787</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9786396070788</p>
+                            <b>Similar books</b>
+                            <button class="myBtn" href="#myModal11">The Stephen Hawking Death Row Fan Club</button>
+                        </div>
+                        <div class="modal-footers">
+                            <h3>CTBooks2020</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="imgs/20.jpg"  style="width:100%">
+                    <h1>The Catcher in The Rye</h1>
+                    <p>$18.99</p>
+                    <p>AS DEATH ROW INMATES AWAIT EXECUTION, THEY DELVE INTO A STUDY OF THE UNIVERSE. A STALKER LETS US GLIMPSE INTO THE WORLD OF HIS COMPULSIONS.</p>
+                    <button class="myBtn" href="#myModal20">Product Description</button>
+                    <p><button><a class="add-cart cart20" href="#">Add Cart</a></button></p>
+                </div>
+                <div id="myModal20" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="title">The Catcher in The Rye</h2>
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                            <img src="imgs/20.jpg" class="modal-image-t">
+                            <b >Price:</b>
+                            <p class ="price">$18.99</p>
+                            <b>Description:</b>
+                            <p class="description">AS DEATH ROW INMATES AWAIT EXECUTION, THEY DELVE INTO A STUDY OF THE UNIVERSE. A STALKER LETS US GLIMPSE INTO THE WORLD OF HIS COMPULSIONS.</p>
+                            <b>Genre/Tags:</b>
+                            <p class="tag">Fiction</p>
+                            <p hidden class="sold">40</p>
+                            <p hidden class="best">0</p>
+							<p hidden class="topic">Death, Tragedy, Fiction</p>
+                            <b>Author</b>
+                            <p class="author">J. D. Salinger</p>
+                            <b>Publication Date:</b>
+                            <p class="dateM">March</p>
+                            <p class="dateD">17</p>
+                            <p class="dateY">1920</p>
+                            <b>Rating:</b>
+                            <p class="rating">2</p>
+							<b>Review(s):</b>
+                            <p class="review">I really enjoyed this book. Despite the somewhat dark material, 
+							it was not a downer to read. It wasn't exactly uplifting, but the characters were
+							unique and they were presented by a psychiatrist who offered a balanced view of 
+							their humanity, both grotesque and and vulnerable. The short stories (I honestly
+							don't know nor care which is a "novella") are a great way to tell these stories 
+							from different perspectives.<br/>&emsp;--CJF</p>
+							<p class="review">This book is for REAL! 
+							It's not your typical or predictable "yawn"
+							on convicted felons or death row inmates, so
+							forget trying to determine how things will go.
+							Goodwin's character development is as thrilling
+							as it is disturbing. You'll be drawn into this 
+							one for sure.<br/>&emsp;--CT Freeagent</p>
+							<b>ISBN-10:</b>
+                            <p class="isbn10">1634139154</p>
+							<b>ISBN-13:</b>
+                            <p class="isbn13">9781234130158</p>
+                            <b>Similar books</b>
+                            <button class="myBtn" href="#myModal12">The Leatherman Comes To Town</button>
+                        </div>
+                        <div class="modal-footers">
+                            <h3>CTBooks2020</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
             
         </div>
     </section>
